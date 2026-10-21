@@ -38,7 +38,7 @@ jobs:
                Stop and comment on the PR if the doc is not marked `Status: approved` and `Wireframe: approved`.
             3. Implement the feature so the UI matches the approved wireframe.
             4. Write every test listed in the design doc's Testing strategy. Run lint, unit, and Playwright; fix until green.
-            5. Commit in small, described steps. Do not add dependencies the design doc does not name. Never commit secrets or learnings.md.
+            5. Commit in small, described steps. Do not add dependencies the design doc does not name. Never commit secrets. Append one line to learnings.md for anything that surprised you.
             6. Comment on the PR with what was built, the test results, and anything that surprised you.
                Mark the PR ready for review only if all tests pass.
           claude_args: "--max-turns 80"
