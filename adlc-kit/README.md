@@ -15,11 +15,12 @@ Just describe what you want in plain language, or run `/adlc:start`. Nothing els
 | Step | You say or do | Skill that fires | Output | Gate |
 |---|---|---|---|---|
 | 1 | "I want a to-do app with add, complete, delete" | `start` routes to `requirements-interview` | docs/design-docs/todo-app.md | You say "approved"; doc gets `Status: approved` and `Approved by:` |
-| 2 | "show me" or start continues | `clickable-wireframe` (+ `wireframe-spec`, `webapp-testing`) | wireframes/todo-app/index.html, screenshots | You say "approved"; doc gets `Wireframe: approved` |
-| 3 | "make it nicer" (optional) | `impeccable` / `frontend-design` / `emil-design-eng` | updated wireframe | Re-approve |
-| 4 | `/adlc:ship-feature todo-app` (manual) | `ship-feature` | branch `feat/todo-app`, draft PR labeled `adlc:build` | Label is the build trigger |
-| 5 | nothing | GitHub Actions `adlc-build.yml` runs Claude Code; `ci.yml` verifies | commits, tests, PR marked ready | Branch protection: CI green + human review |
-| 6 | "review this PR" (optional) | `interface-review`, `better-accessibility`, `webapp-testing` | findings | Human merges |
+| 2 | start continues (first feature only, while design.md has no tokens) | `clickable-wireframe` step 3 runs `impeccable` | wireframes/todo-app/directions.html: three font + color directions side by side | You pick one; tokens saved to design.md |
+| 3 | start continues | `clickable-wireframe` (+ `wireframe-spec`, `webapp-testing`) | wireframes/todo-app/index.html, screenshots | You say "approved"; doc gets `Wireframe: approved` |
+| 4 | "make it nicer" (optional) | `impeccable` / `frontend-design` / `emil-design-eng` | updated wireframe | Re-approve |
+| 5 | `/adlc:ship-feature todo-app` (manual) | `ship-feature` | branch `feat/todo-app`, draft PR labeled `adlc:build` | Label is the build trigger |
+| 6 | nothing | GitHub Actions `adlc-build.yml` runs Claude Code; `ci.yml` verifies | commits, tests, PR marked ready | Branch protection: CI green + human review |
+| 7 | "review this PR" (optional) | `interface-review`, `better-accessibility`, `webapp-testing` | findings | Human merges |
 
 Every step ends with `project-memory` updating learnings.md. Silence is never approval.
 

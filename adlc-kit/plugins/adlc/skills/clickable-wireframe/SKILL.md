@@ -11,7 +11,10 @@ Output: wireframes/<feature>/index.html. One file, no build step, opens by doubl
 ## Steps
 1. List every screen (doc section 4) and every transition between them (section 3).
 2. Choose fidelity. Default is mid-fi: real layout and real copy, grey boxes for images. Use `wireframe-spec` to annotate content priority, states, and behavior.
-3. If design.md defines tokens, use them. If the user wants visual polish at this stage, run `impeccable` (or `frontend-design`) for the visual direction, then come back.
+3. Visual direction. If design.md already defines tokens (font, colors, radius), use them and skip to step 4. Otherwise:
+   - Run `impeccable` (or `frontend-design`) to propose three directions that fit product.md: each with a font pairing, a palette (surface, text, one accent), density, and one line on the mood.
+   - Write wireframes/<feature>/directions.html: one file, three columns, each column renders the same sample card (heading, body text, primary button, input) in that direction with real copy from the domain. Open it, screenshot it, show the user.
+   - Ask: pick 1, 2, or 3, or mix. On the pick, write the tokens into design.md (run `project-memory`), then continue. Do not start the wireframe before the user picks.
 4. Build it: each screen is a section, navigation through buttons and hash links, mobile width first (390px), then desktop. Include empty, loading, and error states for any screen that loads data.
 5. Add a wireframe map: pressing M shows a list of all screens and which transitions are wired.
 6. Verify with `webapp-testing`: click every transition, screenshot every screen at 390px and 1280px, fix anything broken.
