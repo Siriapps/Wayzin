@@ -1,0 +1,16 @@
+{
+  "name": "adlc-kit",
+  "owner": {
+    "name": "Siri Appalaneni"
+  },
+  "plugins": [
+    {
+      "name": "adlc",
+      "source": "./plugins/adlc",
+      "description": "Agentic development lifecycle: interview to design doc, clickable wireframe, approval, then GitHub branch + Actions build with tests. Curated design skills included."
+    }
+  ],
+  "metadata": {
+    "description": "ADLC kit: spec to interview to design doc to clickable wireframe to GitHub build, with curated design skills."
+  }
+}

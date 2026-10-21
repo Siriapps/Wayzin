@@ -1,0 +1,22 @@
+# Independent check on every PR: tests are verified by GitHub, not claimed by the agent.
+# Expects package.json scripts `lint` and `test` (Vitest) and a Playwright config.
+name: CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm test -- --run
+      - run: npx playwright install --with-deps chromium
+      - run: npx playwright test

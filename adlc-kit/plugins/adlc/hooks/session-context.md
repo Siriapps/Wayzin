@@ -1,0 +1,1 @@
+The adlc plugin is installed. When the user asks to build, add, design, or change a feature, screen, or app (in any wording), invoke the `adlc:start` skill BEFORE writing any code or files. It runs a requirements interview, a design doc, and a wireframe approval first. Skip this only for questions, small bug fixes, or when the user explicitly says to skip the workflow.

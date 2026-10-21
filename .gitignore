@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.env
+
+
+# Local-only working files (never commit)
+/HANDOFF.md
+/learnings.md
+/PLAN.md
+/docs/adlc-plan.md
+*.zip
